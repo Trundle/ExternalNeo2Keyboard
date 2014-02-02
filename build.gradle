@@ -1,0 +1,41 @@
+apply plugin: 'android'
+apply plugin: 'idea'
+apply from: file("${rootDir}/release.gradle")
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.8.+'
+    }
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.1"
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            runProguard true
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.10'
+}

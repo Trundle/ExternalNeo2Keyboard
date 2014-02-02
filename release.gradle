@@ -1,0 +1,13 @@
+// Un-uncomment the outcommented lines and insert sane values
+// See https://developer.android.com/tools/publishing/app-signing.html
+
+android {
+    signingConfigs {
+        release {
+//            storeFile file("/path/to/key/file")
+//            storePassword "secret"
+//            keyAlias "release-key-alias"
+//            keyPassword "secret"
+        }
+    }
+}

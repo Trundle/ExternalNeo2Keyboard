@@ -1,0 +1,13 @@
+# Gradle
+.gradle/
+build/
+local.properties
+
+# Idea
+*.iml
+*.ipr
+*.iws
+.idea/
+out/
+
+release.gradle
